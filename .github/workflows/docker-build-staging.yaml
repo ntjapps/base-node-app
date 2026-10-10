@@ -46,7 +46,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Get & Set Container Metadata
         id: meta-packages
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         if: env.REGISTRY != '' && env.IMAGE_NAME != ''
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
