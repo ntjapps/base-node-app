@@ -38,7 +38,7 @@ jobs:
         if: env.REGISTRY != '' && env.IMAGE_NAME != ''
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         if: env.REGISTRY != '' && env.IMAGE_NAME != ''
         with:
           registry: ${{ env.REGISTRY }}
